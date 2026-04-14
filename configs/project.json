@@ -9,7 +9,8 @@
     "product",
     "usage"
   ],
-  "accent": "#588157",
+  "accent": "#c82cc6",
+  "secondary_accent": "#a9772c",
   "dashboard_metrics": [
     {
       "label": "North Star",
@@ -44,5 +45,52 @@
     "The primary value proposition is: Analyze seat activation, retention, and workspace behaviors for developer-focused products.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on developer-tools, product, usage."
+  ],
+  "app_archetype": "studio",
+  "ui_profile": {
+    "layout": "rail",
+    "surface": "mist",
+    "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "radius": 21,
+    "shadow": 43,
+    "eyebrow_style": "outline",
+    "module_columns": 2,
+    "hero_align": "center",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Studio 01",
+      "title": "Opportunity Scorecard",
+      "description": "Score the current opportunity shape before deciding what to prioritize next.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Score Opportunity",
+      "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2175,\n    \"segment\": \"enterprise\"\n  }\n}",
+      "hint": "Opportunity score and top factors will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Studio 02",
+      "title": "Metric Storyline",
+      "description": "Translate KPI movement into a concise summary for product, growth, or finance stakeholders.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Summarize Metrics",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 47.9,\n    \"activation\": 45.5,\n    \"retention\": 56.8,\n    \"revenue\": 94.3\n  },\n  \"baseline\": {\n    \"acquisition\": 44.07,\n    \"activation\": 41.86,\n    \"retention\": 52.26,\n    \"revenue\": 86.76\n  }\n}",
+      "hint": "Metric storyline summary will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Studio 03",
+      "title": "Decision Memo",
+      "description": "Generate the next action memo grounded in the project-specific context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Devtool Usage Analytics.\",\n  \"features\": {\n    \"current_conversion\": 0.16,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2175,\n    \"segment\": \"enterprise\"\n  },\n  \"metrics\": {\n    \"acquisition\": 47.9,\n    \"activation\": 45.5,\n    \"retention\": 56.8,\n    \"revenue\": 94.3\n  }\n}",
+      "hint": "Decision memo will appear here.",
+      "span": "normal"
+    }
   ]
 }
